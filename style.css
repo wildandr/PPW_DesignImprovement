@@ -1,0 +1,56 @@
+body{
+    overflow-x: hidden;
+}
+.sectionone{
+    background-image: url(resources/section1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.btn{
+    background-color: #06BEE1;
+    border: none;
+}
+
+.sectionthree{
+    background-image: url(resources/section3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.sectionfive{
+    background-color: white;
+}
+.sectionsix{
+    background-color: white;
+}
+.bgcontent{
+    background-image: url(resources/sunlight-coral.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.problemone{
+    background-image: url(resources/problem1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.solutionone{
+    background-image: url(resources/solution1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.problemtwo{
+    background-image: url(resources/problem2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.solutiontwo{
+    background-image: url(resources/solution2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

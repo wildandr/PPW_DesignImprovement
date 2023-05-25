@@ -9,6 +9,34 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        function calculate() {
+            var botolPlastik = parseInt(document.getElementById("inputBotolPlastik").value);
+            var sedotan = parseInt(document.getElementById("inputSedotan").value);
+            var puntungRokok = parseInt(document.getElementById("inputPuntungRokok").value);
+
+            var jumlahSampahPlastik = botolPlastik + sedotan + puntungRokok;
+
+            document.getElementById("hasil").innerHTML = "Jumlah sampah plastik: " + jumlahSampahPlastik;
+        }
+
+        function addItem() {
+            var namaSampah = document.getElementById("inputNamaSampah").value;
+            var jumlahSampah = parseInt(document.getElementById("inputJumlahSampah").value);
+
+            var itemBaru = document.createElement("li");
+            var text = document.createTextNode(namaSampah + ": " + jumlahSampah);
+            itemBaru.appendChild(text);
+
+            var daftarSampah = document.getElementById("daftarSampah");
+            daftarSampah.appendChild(itemBaru);
+
+            // Mengosongkan nilai input setelah menambahkan item
+            document.getElementById("inputNamaSampah").value = "";
+            document.getElementById("inputJumlahSampah").value = "";
+        }
+    </script>
 </head>
 <body>
     <div class="sectionone parent-container min-vh-100 d-flex flex-wrap flex-column">
@@ -225,6 +253,32 @@
     
         </div>
     </div>
+
+    <h1>Kalkulator Sampah Plastik</h1>
+    <label for="inputBotolPlastik">Botol Plastik:</label>
+    <input type="number" id="inputBotolPlastik"><br><br>
+
+    <label for="inputSedotan">Sedotan:</label>
+    <input type="number" id="inputSedotan"><br><br>
+
+    <label for="inputPuntungRokok">Puntung Rokok:</label>
+    <input type="number" id="inputPuntungRokok"><br><br>
+
+    <button onclick="calculate()">Hitung</button>
+    <br><br>
+
+    <label for="inputNamaSampah">Nama Sampah:</label>
+    <input type="text" id="inputNamaSampah"><br><br>
+
+    <label for="inputJumlahSampah">Jumlah Sampah:</label>
+    <input type="number" id="inputJumlahSampah"><br><br>
+
+    <button onclick="addItem()">Tambah Item</button>
+
+    <h2>Daftar Sampah:</h2>
+    <ul id="daftarSampah"></ul>
+
+    <p id="hasil"></p>
 
     <div class="sectionseven container min-vh-60 d-flex flex-column">
         <div class="row d-flex justify-content-center">
